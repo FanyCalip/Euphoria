@@ -1,24 +1,22 @@
-// sketch.js
 
-var cnv;
-
-function centerCanvas() {
-  var x = (windowWidth - width) / 2;
-  var y = (windowHeight - height) / 2;
-  cnv.position(x, y);
-}
-
+let posX=40;
+let posY=40;
 function setup() {
-  cnv = createCanvas(windowWidth,windowHeight);
-  centerCanvas();
-  background(255, 0, 200);
+  var cnv = createCanvas(windowWidth, windowHeight);
+  cnv.style('display', 'block');
+  background(99, 244, 153);
 }
 
-function windowResized() {
-  centerCanvas();
-}
+
 function draw(){
-  fill(random(0,7),random(0,200),random(0,200));
-  rect(random(100,windowHeight),random(500),random(100,),random(100));
-
+  fill(2,230,242);
+ circle(100,50,posX)
+ posX=posX +1;
+ if(posX==windowWidth){
+  posX=40
+ }
+ circle(posY,150,70)
+ posY=posY +1;
+ if(posY==windowHeight)
+  posY=40;
 }
